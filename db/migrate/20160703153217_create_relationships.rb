@@ -5,6 +5,6 @@ class CreateRelationships < ActiveRecord::Migration
     t.integer :follower_id
     t.timestamps null: false
     end
+    add_index :relationships, :follower_id
   end
-  add_index :relationships, [:follower_id, :followed_id]
 end

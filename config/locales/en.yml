@@ -6,4 +6,12 @@ en:
   about: "About"
   contact: "Contact"
   new: "News"
+  error: "error"
   home_pages: "Welcome to Project1"
+  sigged_flash: "Sigged!  Welcome to Project1"
+  flash_form_contains: "The form contains"
+  create_my_account: "Create my account"
+  confirmation: "Confirmation"
+
+  title:
+    signup: "Sign up"
