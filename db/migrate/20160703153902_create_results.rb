@@ -6,6 +6,6 @@ class CreateResults < ActiveRecord::Migration
     t.references :lesson, index: true, foreign_key: true
     t.timestamps null: false
     end
+    add_index :results, [:question_id, :answer_id,:lesson_id]
   end
-  add_index :results, [:question_id, :answer_id,:lesson_id]
 end

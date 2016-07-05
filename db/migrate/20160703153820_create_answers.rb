@@ -7,5 +7,4 @@ class CreateAnswers < ActiveRecord::Migration
     t.timestamps null: false
     end
   end
-  add_index :answers, [:question_id]
 end
