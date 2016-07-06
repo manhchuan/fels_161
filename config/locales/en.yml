@@ -15,9 +15,16 @@ en:
   login_error_flash: "Invalid email/password combination"
   account: "Account"
   users: "Users"
+  follow: "Follow"
+  unfollow: "Unfollow"
+  following: "following"
+  followers: "followers"
+  find_error: "Can not find user"
+  flash_logged_in_user: "Please log in"
   title:
     signup: "Sign up"
     login: "Login"
+    all_users: "All Users"
 
   user_menu:
     profile: "Profile"
