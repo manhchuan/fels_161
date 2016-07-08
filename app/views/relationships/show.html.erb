@@ -1,5 +1,5 @@
-<% provide :title, @user.name %>
-<div class="row">
+<% provide :title, @title %>
+<div class="row">  
   <aside class="col-md-6">
     <section class="user_info">
       <h2>
@@ -11,7 +11,13 @@
     </section>
     <%= render "shared/stats" %>
   </aside>
-  <div class="col-md-8">
-    <%= render "follow_form" if logged_in? %>
-  </div>
+</div>
+<div class="col-md-8">
+  <h3><%= @title %></h3>
+  <% if @users.any? %>
+    <ul class="users follow">
+      <%= render @users %>
+    </ul>
+    <%= will_paginate @users %>
+  <% end %>
 </div>
