@@ -15,6 +15,8 @@ class User < ActiveRecord::Base
 
   has_secure_password
 
+  mount_uploader :avatar, AvatarUploader
+
   def follow other_user
     active_relationships.create followed_id: other_user.id
   end
