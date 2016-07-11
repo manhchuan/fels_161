@@ -12,7 +12,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to t("user_menu.profile"), current_user %></li>
-              <li><%= link_to t("user_menu.setting"), "#" %></li>
+              <li><%= link_to t("user_menu.setting"), edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to t("user_menu.logout"), logout_path, method: :delete %>
