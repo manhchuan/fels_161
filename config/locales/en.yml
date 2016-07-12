@@ -31,6 +31,9 @@ en:
   edit: "Edit"
   sure: "Are you sure"
   confirmation: "Confirmation"
+  delete: "delete"
+  user_deleted: "User deleted"
+  not_admin: "Not Admin"
 
   edit:
     title: "Edit User"
