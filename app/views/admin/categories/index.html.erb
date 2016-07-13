@@ -1,5 +1,5 @@
-<h1><%= t "index" %></h1>
-<table>
+<h1><%= t :all_categories %></h1>
+<table class="table table-striped">
   <thead>
     <tr>
       <th><%= t "name" %></th>
@@ -10,12 +10,12 @@
     <% @categories.each do |category| %>
     <tr>
       <td><%= category.name %></td>
-      <td><%= link_to t("show"), admin_category_path(category)%></td>
-      <td><%= link_to t("edit"), edit_admin_category_path(category) %></td>
-      <td><%= link_to t("destroy"), [:admin, category], method: :delete, data: {confirm: t("sure")} %></td>
+      <td><%= link_to t("show"), admin_category_path(category) %></td>
+      <td><%= link_to t("category.edit"), edit_admin_category_path(category) %> |
+      <%= link_to t("category.destroy"), [:admin, category],
+        method: :delete, data: {confirm: t("sure")} %></td>
     </tr>
     <% end %>
   </tbody>
 </table>
-<br>
 <%= link_to t("category.new"), new_admin_category_path %>
