@@ -1,5 +1,5 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :require_admin
+  before_action :admin_user
   before_action :find_category, except: [:index, :new, :create]
 
   def index
@@ -12,7 +12,7 @@ class Admin::CategoriesController < ApplicationController
 
   def edit
   end
-
+  
   def create
     @category = Category.new category_params
     if @category.save

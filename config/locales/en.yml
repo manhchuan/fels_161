@@ -34,6 +34,8 @@ en:
   delete: "delete"
   user_deleted: "User deleted"
   not_admin: "Not Admin"
+  all_categories: "All Categories"
+  catetories: "Categories"
 
   edit:
     title: "Edit User"
@@ -51,10 +53,11 @@ en:
     setting: "Settings"  
     logout: "Log out"
 
-  catetory:
+  category:
     create: "Sucessfull create catetory"
     updated: "Sucessfull update catetory"
     fails: "Not found any category"
     new: "New Category"
-    edit: "Edit Category"
+    edit: "Edit"
     index: "All Categories"
+    destroy: "Destroy"
