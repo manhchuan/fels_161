@@ -1,0 +1,7 @@
+<% provide :title, t("all_question") %>
+<h1><%= t :all_question %></h1>
+<ul class="question">
+  <% if @questions.any? %>
+    <%= render @questions %>
+  <% end %>
+</ul>
