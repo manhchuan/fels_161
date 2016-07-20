@@ -1,0 +1,10 @@
+<h2><%= @question.name %></h2>
+<div class="checkbox">
+  <% @answers.each do |answer| %>
+    <label><input type="checkbox" <%= "checked" if answer.is_correct %>>
+      <%= answer.name %>
+    </label><br>
+  <% end %>
+</div>
+<%= link_to t("category.back"), admin_questions_path %>
+<%= link_to t("question_edit"), edit_admin_question_path(@question) %>
