@@ -8,6 +8,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find_by_id params[:id]
+    @questions = @category.questions.paginate page: params[:page]
   end
 
   private

@@ -2,4 +2,13 @@
   <strong><%= t :name %></strong>
   <%= @category.name %>
 </p>
-<%= link_to t("category.back"), categories_path %>
+<div class="container">
+  <div class="row col-sm-5">
+    <% if @questions.any? %>
+      <%= render @questions %>
+    <% end %>
+    <%= link_to t("category.back"), categories_path %>
+  </div> 
+</div>
+<%= link_to t(:Start_Lesson), new_category_lesson_path(@category),
+  class: "btn btn-primary" %>

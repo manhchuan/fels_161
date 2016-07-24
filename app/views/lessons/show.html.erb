@@ -1,0 +1,21 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th><%= t :question %></th>
+        <th><%= t :your_answer %></th>
+        <th><%= t :right_answer %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @lesson.results.each do |rs| %>
+        <tr>
+          <td><%= rs.question.name %></td>
+          <td><%= rs.answer.name %></td>
+            <td><%= rs.right_answer[0].name %></tdp>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= t :result %><div><%= @lesson.right_answers_count %>/<%= @lesson.results.size %></div>
+</div>

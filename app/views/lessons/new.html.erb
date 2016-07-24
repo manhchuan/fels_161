@@ -1,0 +1,14 @@
+<%= form_for [@category,@lesson] do |f| %>
+  <% i=0 %>
+  <%= f.fields_for :results do |re| %>
+    <div class="ques">
+      <p><%= @questions[i].name %></p>
+      <% @questions[i].answers.each do |asw| %>
+        <%= re.radio_button :answer_id, asw.id %>
+        <%= asw.name %>
+      <% end %>
+    </div>
+    <% i+=1 %>
+  <% end %>
+  <%= f.submit t(:submit), class: "btn btn-primary" %>
+<% end %>

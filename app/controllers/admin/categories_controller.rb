@@ -13,6 +13,11 @@ class Admin::CategoriesController < ApplicationController
   def edit
   end
   
+  def show
+    @category = Category.find_by_id params[:id]
+    @questions = @category.questions.paginate page: params[:page]
+  end
+
   def create
     @category = Category.new category_params
     if @category.save

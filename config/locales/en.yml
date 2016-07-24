@@ -52,7 +52,12 @@ en:
   update_question: "Update"
   question_update: "Question updated"
   question_update_error: "Question update ERROR"
-
+  lesson_created: "Lesson Finish"
+  lesson_create_error: "Create ERROR"
+  submit: "Submit"
+  your_answer: "Your Answer"
+  right_answer: "Right Answer"
+  result: "Result"
   edit:
     title: "Edit User"
     save: "Save changes"

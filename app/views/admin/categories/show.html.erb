@@ -2,6 +2,9 @@
   <strong><%= t :name %></strong>
   <%= @category.name %>
 </p>
+<% if @questions.any? %>
+  <%= render @questions %>
+<% end %>
 
 <%= link_to t("category.edit"), edit_admin_category_path(@category) %> |
 <%= link_to t("category.back"), admin_categories_path %>
